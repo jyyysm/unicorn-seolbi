@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 네이버 SEO 핵심 메타태그 -->
+    <title>유니콘클린설비 | 대구 경산 하수구막힘 고압세척 변기 싱크대 뚫음 전문</title>
+    <meta name="description" content="유니콘클린설비 - 대구, 경산 전지역 30분 긴급 출동! 하수구 막힘, 배관 고압세척, 변기·싱크대 역류, 내시경 배관 진단 전문 설비 업체입니다.">
+    <meta name="keywords" content="유니콘클린설비, 대구하수구막힘, 경산하수구막힘, 대구고압세척, 경산배관케어, 대구변기뚫음, 대구싱크대막힘">
+    <meta name="robots" content="index, follow">
+    
+    <!-- 네이버 서치어드바이저 소유확인 태그 (발급받은 코드값으로 교체) -->
+    <meta name="naver-site-verification" content="여기에_네이버_서치어드바이저_검증코드를_넣으세요" />
+
+    <!-- Open Graph (카카오톡, 블로그 공유 시 노출되는 정보) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="유니콘클린설비 | 대구/경산 하수구막힘·고압세척 전문">
+    <meta property="og:description" content="막힌 배관 시원하게 뚫어드립니다. 최첨단 내시경 & 플렉스 샤프트 보유.">
+    <meta property="og:image" content="https://via.placeholder.com/800x400?text=유니콘클린설비">
+    
+    <!-- 구조화 데이터 (네이버/구글 검색 로봇용 LocalBusiness 스키마) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "PlumbingService",
+      "name": "유니콘클린설비",
+      "image": "https://via.placeholder.com/800x400",
+      "telephone": "010-2230-5630",
+      "priceRange": "₩",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "대구광역시",
+        "addressRegion": "대구 및 경산 전지역",
+        "addressCountry": "KR"
+      },
+      "areaServed": ["대구광역시", "경산시"],
+      "description": "대구, 경산 지역 하수구 막힘, 고압세척, 배관 스케일링, 변기 및 싱크대 수리 전문 유니콘클린설비"
+    }
+    </script>
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Noto Sans KR', sans-serif; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; padding-bottom: 60px; }
+        header { background: #004b93; color: #fff; text-align: center; padding: 45px 20px 35px; }
+        header h1 { font-size: 1.8rem; margin-bottom: 10px; font-weight: 700; }
+        header p { font-size: 1.1rem; opacity: 0.9; }
+        
+        .cta-btn { display: inline-block; background: #ff3b30; color: #fff; text-decoration: none; padding: 15px 30px; font-size: 1.3rem; font-weight: bold; border-radius: 50px; margin-top: 20px; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+        .cta-btn:hover { background: #e02d23; }
+        
+        .container { max-width: 800px; margin: 0 auto; padding: 30px 20px; }
+        section { background: #fff; padding: 25px; border-radius: 12px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { font-size: 1.4rem; color: #004b93; border-bottom: 2px solid #004b93; padding-bottom: 8px; margin-bottom: 15px; }
+        
+        .service-list { list-style: none; }
+        .service-list li { padding: 10px 0; border-bottom: 1px border-dashed #eee; font-weight: 500; }
+        .service-list li:last-child { border-bottom: none; }
+        .highlight { color: #d9534f; font-weight: bold; }
+        
+        .process-steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; text-align: center; margin-top: 15px; }
+        .step { background: #f1f5f9; padding: 15px; border-radius: 8px; }
+        .step strong { display: block; color: #004b93; margin-bottom: 5px; }
+        
+        footer { text-align: center; padding: 30px 20px; font-size: 0.9rem; color: #666; background: #e9ecef; }
+        
+        /* 모바일 고정 전화 버튼 */
+        .fixed-call { position: fixed; bottom: 0; left: 0; right: 0; background: #25d366; color: #fff; text-align: center; padding: 16px; font-size: 1.3rem; font-weight: bold; text-decoration: none; box-shadow: 0 -2px 10px rgba(0,0,0,0.15); z-index: 1000; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>유니콘클린설비</h1>
+        <p>대구 · 경산 하수구막힘 / 고압세척 / 배관 스케일링 전문</p>
+        <a href="tel:010-2230-5630" class="cta-btn">📞 지금 바로 전화 상담하기 (010-2230-5630)</a>
+    </header>
+
+    <main class="container">
+        <section>
+            <h2>주요 해결 서비스</h2>
+            <ul class="service-list">
+                <li>🚨 <span class="highlight">하수구 · 오수관 막힘</span> : 최첨단 내시경 확인 후 고압세척 해결</li>
+                <li>🛠️ <span class="highlight">싱크대 · 변기 역류</span> : 굳은 기름 슬러지 및 이물질 스케일링</li>
+                <li>🔍 <span class="highlight">배관 내시경 촬영</span> : 막힌 원인을 눈으로 직접 확인 후 작업</li>
+                <li>🔧 <span class="highlight">수전 및 배관 교체</span> : 낡은 씽크대 수전, 트랩, 관련 부속 교체</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>작업 진행 절차</h2>
+            <div class="process-steps">
+                <div class="step"><strong>1. 전화 상담</strong>출동 가능 시간 안내</div>
+                <div class="step"><strong>2. 현장 출동</strong>30분 내 신속 방문</div>
+                <div class="step"><strong>3. 원인 진단</strong>내시경으로 원인 확인</div>
+                <div class="step"><strong>4. 완벽 해결</strong>뚫음 및 테스트 확인</div>
+            </div>
+        </section>
+
+        <section>
+            <h2>출동 가능 지역</h2>
+            <p><strong>대구광역시 전지역:</strong> 수성구, 달서구, 중구, 북구, 동구, 남구, 달성군</p>
+            <p><strong>경산시 전지역:</strong> 하양, 진량, 압량 및 동 지역 전체</p>
+            <p style="margin-top: 10px; color: #666; font-size: 0.95rem;">※ 현장 상황에 맞춰 최첨단 장비(플렉스 샤프트, 고압세척기)로 작업 진행합니다.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p><strong>유니콘클린설비</strong> | 출동 문의: 010-2230-5630</p>
+        <p>Copyright © 유니콘클린설비 All Rights Reserved.</p>
+    </footer>
+
+    <!-- 모바일 전용 하단 고정 전화걸기 버튼 -->
+    <a href="tel:010-2230-5630" class="fixed-call">📞 유니콘클린설비 긴급 전화 연결 (클릭)</a>
+
+</body>
+</html>
