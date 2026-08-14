@@ -6,18 +6,20 @@
     <title>신암동 하수구막힘 긴급출동 | 유니콘클린설비</title>
     <style>
         * { box-sizing: border-box; }
-        body {
-            font-family: 'Noto Sans KR', sans-serif;
+        html, body {
             margin: 0;
-            padding: 0 0 70px 0;
+            padding: 0;
+            width: 100%;
+            overflow-x: hidden;
             background-color: #0d3266;
+            font-family: 'Noto Sans KR', sans-serif;
             color: #333;
         }
         main {
             max-width: 600px;
             margin: 0 auto;
+            padding: 12px 12px 80px 12px;
             background-color: #0d3266;
-            padding: 12px;
         }
         
         /* 상단 전화 연결 버튼 */
@@ -52,11 +54,11 @@
             margin-bottom: 15px;
         }
 
-        /* 흰색 카드 구조 */
+        /* 흰색 카드리프 구조 */
         .card-box {
             background-color: #ffffff;
             border-radius: 16px;
-            padding: 20px;
+            padding: 18px;
             margin-bottom: 16px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
@@ -66,22 +68,33 @@
             background-color: #1a3a4b;
             color: #ffffff;
             border-radius: 12px;
-            padding: 20px;
+            padding: 18px;
             display: flex;
             align-items: center;
             justify-content: space-between;
+            gap: 10px;
         }
-        .profile-text h3 { margin: 0 0 10px 0; font-size: 20px; letter-spacing: 1px; }
-        .profile-text p { margin: 4px 0; font-size: 13px; color: #dcdfe6; }
-        .profile-text .name { font-size: 15px; font-weight: bold; margin-bottom: 8px; color: #fff; }
-        .profile-img { width: 110px; border-radius: 10px; }
+        .profile-text { flex: 1; }
+        .profile-text h3 { margin: 0 0 6px 0; font-size: 19px; letter-spacing: 0.5px; }
+        .profile-text .name { font-size: 14px; font-weight: bold; margin-bottom: 8px; color: #fff; }
+        
+        /* 연락처 정렬 */
+        .phone-row { font-size: 12.5px; color: #dcdfe6; margin: 3px 0; }
+        .phone-row.sub { padding-left: 48px; }
+
+        .profile-img { 
+            width: 95px; 
+            height: auto;
+            border-radius: 8px; 
+            flex-shrink: 0;
+        }
 
         /* 서비스 안내 타이틀 */
         .section-title {
-            font-size: 18px;
+            font-size: 17px;
             font-weight: bold;
             color: #123c73;
-            margin: 15px 0 10px 0;
+            margin: 10px 0 15px 0;
             border-bottom: 2px solid #123c73;
             padding-bottom: 6px;
         }
@@ -92,25 +105,30 @@
             border: 1px solid #e9ecef;
             border-radius: 10px;
             padding: 12px;
-            margin-top: 10px;
+            margin-top: 12px;
             font-size: 13px;
             line-height: 1.6;
         }
 
-        /* 이미지 공통 수정 (display: block 추가) */
+        /* 개별 서비스 블록 */
+        .service-block {
+            margin-bottom: 20px;
+            font-size: 13.5px;
+            line-height: 1.5;
+        }
+        .service-block strong {
+            display: inline-block;
+            margin-bottom: 4px;
+        }
+
+        /* 이미지 공통 스타일 */
         .service-img {
             display: block;
             width: 100%;
+            max-width: 100%;
             height: auto;
             border-radius: 10px;
-            margin-top: 10px;
-        }
-
-        /* 서비스 아이템 개별 박스 */
-        .service-item {
-            margin-top: 20px;
-            font-size: 14px;
-            line-height: 1.5;
+            margin-top: 8px;
         }
 
         /* 하단 지역 바로가기 버튼 스타일 */
@@ -131,7 +149,7 @@
         .link-tags { display: flex; flex-wrap: wrap; gap: 6px; }
         .link-tag {
             display: inline-block;
-            padding: 6px 12px;
+            padding: 6px 11px;
             background-color: #ffffff;
             border: 1px solid #dcdfe6;
             border-radius: 8px;
@@ -184,22 +202,23 @@
         </div>
 
         <!-- 명함 카드 -->
-        <div class="card-box" style="padding: 10px; background-color: transparent;">
+        <div class="card-box" style="padding: 0; background-color: transparent; box-shadow: none;">
             <div class="profile-card">
                 <div class="profile-text">
                     <h3>유니콘클린설비</h3>
                     <div class="name">대표 전 윤 영</div>
-                    <p>연락처 : 010-2230-5630</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-2225-5992</p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-2127-5992</p>
+                    <div class="phone-row">연락처 : 010-2230-5630</div>
+                    <div class="phone-row sub">010-2225-5992</div>
+                    <div class="phone-row sub">010-2127-5992</div>
                 </div>
-                <img src="profile_card.png" alt="전윤영 대표" class="profile-img" onerror="this.style.display='none'">
+                <!-- 실제 파일명 ceo.jpg.png 연결 -->
+                <img src="ceo.jpg.png" alt="전윤영 대표" class="profile-img" onerror="this.style.display='none'">
             </div>
         </div>
 
         <!-- 설비 서비스 안내 -->
         <div class="card-box">
-            <h4 style="margin:0 0 10px 0; color:#e53935;">📍 신암동 현장 맞춤 설비 서비스</h4>
+            <h4 style="margin:0 0 10px 0; color:#e53935; font-size:16px;">📍 신암동 현장 맞춤 설비 서비스</h4>
             <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #444;">
                 신암 뉴타운 및 동대구역 인근 주택가, 식당 상가는 배관 사용량이 많아 기름 슬러지 및 오수관 막힘이 빈번하게 발생합니다. 유니콘클린설비는 최첨단 배관 내시경 카메라로 원인을 정확히 찾아내고, 플렉스 샤프트 스케일링 및 고압세척 전문 장비로 재발 없는 확실한 시공을 약속드립니다.
             </p>
@@ -209,47 +228,53 @@
             </div>
         </div>
 
-        <!-- 공통 안내 이미지 -->
-        <img src="banner_process.png" alt="유니콘클린설비 맞춤해결 과정" class="service-img" style="margin-bottom: 16px;" onerror="this.style.display='none'">
+        <!-- 공통 안내 이미지 (실제 파일명 work6.jpg.png 연결) -->
+        <img src="work6.jpg.png" alt="유니콘클린설비 맞춤해결 과정" class="service-img" style="margin-bottom: 16px;" onerror="this.style.display='none'">
 
         <!-- 맞춤 해결 서비스 카테고리 -->
         <div class="card-box">
             <div class="section-title">신암동 맞춤 해결 서비스</div>
 
-            <!-- 1. 하수구/오수관 막힘 -->
-            <div class="service-item">
-                <strong style="color:#123c73;">🚨 신암동 하수구 · 오수관 막힘 :</strong> 배관 내시경 정밀 확인 후 기름 슬러지 고압세척
-                <img src="hasugu.png" alt="하수구 고압세척" class="service-img" onerror="this.style.display='none'">
+            <!-- 1. 하수구/오수관 막힘 (hasugu.jpg 연결) -->
+            <div class="service-block">
+                <strong style="color:#123c73;">🚨 신암동 하수구 · 오수관 막힘</strong><br>
+                배관 내시경 정밀 확인 후 기름 슬러지 고압세척
+                <img src="hasugu.jpg" alt="하수구 고압세척" class="service-img" onerror="this.style.display='none'">
             </div>
 
-            <!-- 2. 싱크대/변기 역류 -->
-            <div class="service-item">
-                <strong style="color:#123c73;">🔨 신암동 싱크대 · 변기 역류 :</strong> 굳은 이물질 제거 및 배관 스케일링 작업
-                <img src="sink.png" alt="배관 스케일링 작업" class="service-img" onerror="this.style.display='none'">
+            <!-- 2. 싱크대/변기 역류 (sink.jpg.png 연결) -->
+            <div class="service-block">
+                <strong style="color:#123c73;">🔨 신암동 싱크대 · 변기 역류</strong><br>
+                굳은 이물질 제거 및 배관 스케일링 작업
+                <img src="sink.jpg.png" alt="배관 스케일링 작업" class="service-img" onerror="this.style.display='none'">
             </div>
 
-            <!-- 3. 내시경 정밀 검사 -->
-            <div class="service-item">
-                <strong style="color:#123c73;">🔍 배관 내시경 정밀 검사 :</strong> 막힌 위치와 원인을 눈으로 직접 확인 후 맞춤 시공
-                <img src="endoscope.png" alt="내시경 검사 전후" class="service-img" onerror="this.style.display='none'">
+            <!-- 3. 내시경 정밀 검사 (camera.jpg 연결) -->
+            <div class="service-block">
+                <strong style="color:#123c73;">🔍 배관 내시경 정밀 검사</strong><br>
+                막힌 위치와 원인을 눈으로 직접 확인 후 맞춤 시공
+                <img src="camera.jpg" alt="내시경 검사 전후" class="service-img" onerror="this.style.display='none'">
             </div>
 
-            <!-- 4. 수전 및 배관 교체 -->
-            <div class="service-item">
-                <strong style="color:#123c73;">🔧 수전 및 배관 교체 :</strong> 싱크대 수전, 욕실 수도꼭지, 배수구 트랩 신속 교체
-                <img src="faucet.png" alt="수전 교체 현장" class="service-img" onerror="this.style.display='none'">
+            <!-- 4. 수전 및 배관 교체 (faucet.jpg.png 연결) -->
+            <div class="service-block">
+                <strong style="color:#123c73;">🔧 수전 및 배관 교체</strong><br>
+                싱크대 수전, 욕실 수도꼭지, 배수구 트랩 신속 교체
+                <img src="faucet.jpg.png" alt="수전 교체 현장" class="service-img" onerror="this.style.display='none'">
             </div>
 
-            <!-- 5. 변기 교체 및 부속 수리 -->
-            <div class="service-item">
-                <strong style="color:#123c73;">🚽 변기 교체 및 부속 수리 :</strong> 낡은 변기 교체, 악취 차단 트랩, 백시멘트 재시공
-                <img src="toilet.png" alt="변기 교체 및 부속 수리" class="service-img" onerror="this.style.display='none'">
+            <!-- 5. 변기 교체 및 부속 수리 (toilet.jpg.png 연결) -->
+            <div class="service-block">
+                <strong style="color:#123c73;">🚽 변기 교체 및 부속 수리</strong><br>
+                낡은 변기 교체, 악취 차단 트랩, 백시멘트 재시공
+                <img src="toilet.jpg.png" alt="변기 교체 및 부속 수리" class="service-img" onerror="this.style.display='none'">
             </div>
 
-            <!-- 6. 욕조 배수구 수리 -->
-            <div class="service-item">
-                <strong style="color:#123c73;">🛁 욕조 배수구 수리 :</strong> 빠지거나 파손된 신암동 욕조 배수구 특수 수리
-                <img src="bathtub.png" alt="욕조 배수구 수리" class="service-img" onerror="this.style.display='none'">
+            <!-- 6. 욕조 배수구 수리 (bathtub.jpg.png 연결) -->
+            <div class="service-block">
+                <strong style="color:#123c73;">🛁 욕조 배수구 수리</strong><br>
+                빠지거나 파손된 신암동 욕조 배수구 특수 수리
+                <img src="bathtub.jpg.png" alt="욕조 배수구 수리" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 하단 지역 바로가기 -->
