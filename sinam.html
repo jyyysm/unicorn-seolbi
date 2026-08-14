@@ -52,7 +52,7 @@
             margin-bottom: 15px;
         }
 
-        /* 흰색 카드리프 구조 */
+        /* 흰색 카드 구조 */
         .card-box {
             background-color: #ffffff;
             border-radius: 16px;
@@ -97,11 +97,20 @@
             line-height: 1.6;
         }
 
-        /* 이미지 공통 */
+        /* 이미지 공통 수정 (display: block 추가) */
         .service-img {
+            display: block;
             width: 100%;
+            height: auto;
             border-radius: 10px;
             margin-top: 10px;
+        }
+
+        /* 서비스 아이템 개별 박스 */
+        .service-item {
+            margin-top: 20px;
+            font-size: 14px;
+            line-height: 1.5;
         }
 
         /* 하단 지역 바로가기 버튼 스타일 */
@@ -208,39 +217,39 @@
             <div class="section-title">신암동 맞춤 해결 서비스</div>
 
             <!-- 1. 하수구/오수관 막힘 -->
-            <div style="margin-top: 15px;">
+            <div class="service-item">
                 <strong style="color:#123c73;">🚨 신암동 하수구 · 오수관 막힘 :</strong> 배관 내시경 정밀 확인 후 기름 슬러지 고압세척
-                <img src="hasugu.png" alt="하수구 고압세척" class="service-img">
+                <img src="hasugu.png" alt="하수구 고압세척" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 2. 싱크대/변기 역류 -->
-            <div style="margin-top: 20px;">
+            <div class="service-item">
                 <strong style="color:#123c73;">🔨 신암동 싱크대 · 변기 역류 :</strong> 굳은 이물질 제거 및 배관 스케일링 작업
-                <img src="sink.png" alt="배관 스케일링 작업" class="service-img">
+                <img src="sink.png" alt="배관 스케일링 작업" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 3. 내시경 정밀 검사 -->
-            <div style="margin-top: 20px;">
+            <div class="service-item">
                 <strong style="color:#123c73;">🔍 배관 내시경 정밀 검사 :</strong> 막힌 위치와 원인을 눈으로 직접 확인 후 맞춤 시공
-                <img src="endoscope.png" alt="내시경 검사 전후" class="service-img">
+                <img src="endoscope.png" alt="내시경 검사 전후" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 4. 수전 및 배관 교체 -->
-            <div style="margin-top: 20px;">
+            <div class="service-item">
                 <strong style="color:#123c73;">🔧 수전 및 배관 교체 :</strong> 싱크대 수전, 욕실 수도꼭지, 배수구 트랩 신속 교체
-                <img src="faucet.png" alt="수전 교체 현장" class="service-img">
+                <img src="faucet.png" alt="수전 교체 현장" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 5. 변기 교체 및 부속 수리 -->
-            <div style="margin-top: 20px;">
+            <div class="service-item">
                 <strong style="color:#123c73;">🚽 변기 교체 및 부속 수리 :</strong> 낡은 변기 교체, 악취 차단 트랩, 백시멘트 재시공
-                <img src="toilet.png" alt="변기 교체 및 부속 수리" class="service-img">
+                <img src="toilet.png" alt="변기 교체 및 부속 수리" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 6. 욕조 배수구 수리 -->
-            <div style="margin-top: 20px;">
+            <div class="service-item">
                 <strong style="color:#123c73;">🛁 욕조 배수구 수리 :</strong> 빠지거나 파손된 신암동 욕조 배수구 특수 수리
-                <img src="bathtub.png" alt="욕조 배수구 수리" class="service-img">
+                <img src="bathtub.png" alt="욕조 배수구 수리" class="service-img" onerror="this.style.display='none'">
             </div>
 
             <!-- 하단 지역 바로가기 -->
