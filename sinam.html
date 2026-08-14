@@ -5,44 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>신암동 하수구막힘 긴급출동 | 유니콘클린설비</title>
     <style>
-        /* 기본 레이아웃 스타일 */
+        * { box-sizing: border-box; }
         body {
             font-family: 'Noto Sans KR', sans-serif;
             margin: 0;
             padding: 0 0 70px 0;
             background-color: #0d3266;
+            color: #333;
         }
         main {
             max-width: 600px;
             margin: 0 auto;
+            background-color: #0d3266;
+            padding: 12px;
+        }
+        
+        /* 상단 전화 연결 버튼 */
+        .top-call-btn {
+            display: block;
+            background-color: #e53935;
+            color: #ffffff;
+            text-align: center;
+            padding: 15px 10px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+            margin-bottom: 12px;
+        }
+        .top-call-btn span {
+            display: block;
+            font-size: 15px;
+            margin-top: 4px;
+        }
+
+        /* 30분 방문 배지 */
+        .visit-badge {
+            background-color: #1a4980;
+            color: #ffca28;
+            text-align: center;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        /* 흰색 카드리프 구조 */
+        .card-box {
             background-color: #ffffff;
+            border-radius: 16px;
             padding: 20px;
-            box-sizing: border-box;
+            margin-bottom: 16px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
         }
-        ul {
-            list-style: none;
-            padding: 0;
+
+        /* 명함 영역 */
+        .profile-card {
+            background-color: #1a3a4b;
+            color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
-        li {
-            margin-bottom: 20px;
+        .profile-text h3 { margin: 0 0 10px 0; font-size: 20px; letter-spacing: 1px; }
+        .profile-text p { margin: 4px 0; font-size: 13px; color: #dcdfe6; }
+        .profile-text .name { font-size: 15px; font-weight: bold; margin-bottom: 8px; color: #fff; }
+        .profile-img { width: 110px; border-radius: 10px; }
+
+        /* 서비스 안내 타이틀 */
+        .section-title {
+            font-size: 18px;
+            font-weight: bold;
+            color: #123c73;
+            margin: 15px 0 10px 0;
+            border-bottom: 2px solid #123c73;
+            padding-bottom: 6px;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin-top: 8px;
+
+        /* 구역 박스 */
+        .area-box {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            padding: 12px;
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        /* 이미지 공통 */
+        .service-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 10px;
         }
 
         /* 하단 지역 바로가기 버튼 스타일 */
         .local-links {
-            margin-top: 25px;
-            padding: 15px;
             background-color: #f4f7fa;
             border-radius: 12px;
+            padding: 15px;
+            margin-top: 15px;
         }
-        .district-group {
-            margin-top: 12px;
-        }
+        .district-group { margin-top: 12px; }
         .district-title {
             font-weight: bold;
             font-size: 13px;
@@ -50,11 +119,7 @@
             display: block;
             margin-bottom: 6px;
         }
-        .link-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-        }
+        .link-tags { display: flex; flex-wrap: wrap; gap: 6px; }
         .link-tag {
             display: inline-block;
             padding: 6px 12px;
@@ -92,105 +157,168 @@
 </head>
 <body>
     <main>
-        <section class="service-info">
-            <h2>🛠️ 신암동 전문 설비 서비스</h2>
-            <ul>
-                <li>
-                    <div>🚰 <strong>수전 및 배관 교체</strong> : 싱크대 수전, 욕실 수도꼭지, 배수구 트랩 신속 교체</div>
-                    <img src="faucet.jpg.png" alt="신암동 수전교체 현장 사진">
-                </li>
-                <li>
-                    <div>🚽 <strong>변기 교체 및 부속 수리</strong> : 낡은 변기 교체, 악취 차단 트랩, 백시멘트 재시공</div>
-                    <img src="toilet.jpg.png" alt="신암동 변기수리 현장 사진">
-                </li>
-                <li>
-                    <div>🛁 <strong>욕조 배수구 수리</strong> : 빠지거나 파손된 신암동 욕조 배수구 특수 수리</div>
-                    <img src="bathtub.jpg.png" alt="신암동 욕조 배수구 수리 현장">
-                </li>
-            </ul>
-        </section>
+        <!-- 상단 전화 상단 버튼 -->
+        <a href="tel:010-2230-5630" class="top-call-btn">
+            📞 신암동 긴급 출동 상담하기
+            <span>(010-2230-5630)</span>
+        </a>
 
-        <!-- 동네 간 내부 링크 (SEO 강화) -->
-        <section class="local-links">
-            <strong style="font-size: 14px; color: #123c73;">📍 주요 서비스 및 대구·경산 지역 바로가기</strong>
-            
-            <div class="district-group">
-                <span class="district-title">🏠 핵심 바로가기</span>
-                <div class="link-tags">
-                    <a href="index.html" class="link-tag highlight">메인 홈페이지</a>
+        <!-- 30분 방문 배지 -->
+        <div class="visit-badge">
+            🤝 신암동 현장 30분 내 대표 직접 방문!
+        </div>
+
+        <!-- 명함 카드 -->
+        <div class="card-box" style="padding: 10px; background-color: transparent;">
+            <div class="profile-card">
+                <div class="profile-text">
+                    <h3>유니콘클린설비</h3>
+                    <div class="name">대표 전 윤 영</div>
+                    <p>연락처 : 010-2230-5630</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-2225-5992</p>
+                    <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;010-2127-5992</p>
                 </div>
+                <img src="profile_card.png" alt="전윤영 대표" class="profile-img" onerror="this.style.display='none'">
+            </div>
+        </div>
+
+        <!-- 설비 서비스 안내 -->
+        <div class="card-box">
+            <h4 style="margin:0 0 10px 0; color:#e53935;">📍 신암동 현장 맞춤 설비 서비스</h4>
+            <p style="font-size: 13px; line-height: 1.6; margin: 0; color: #444;">
+                신암 뉴타운 및 동대구역 인근 주택가, 식당 상가는 배관 사용량이 많아 기름 슬러지 및 오수관 막힘이 빈번하게 발생합니다. 유니콘클린설비는 최첨단 배관 내시경 카메라로 원인을 정확히 찾아내고, 플렉스 샤프트 스케일링 및 고압세척 전문 장비로 재발 없는 확실한 시공을 약속드립니다.
+            </p>
+            <div class="area-box">
+                <strong>🏢 신암동 주요 출장 구역:</strong><br>
+                신암 뉴타운, 동대구 해모로 훠스트, 신암 청아람, 동대구역 이안, 신암동 상가주택 및 단독주택 전지역
+            </div>
+        </div>
+
+        <!-- 공통 안내 이미지 -->
+        <img src="banner_process.png" alt="유니콘클린설비 맞춤해결 과정" class="service-img" style="margin-bottom: 16px;" onerror="this.style.display='none'">
+
+        <!-- 맞춤 해결 서비스 카테고리 -->
+        <div class="card-box">
+            <div class="section-title">신암동 맞춤 해결 서비스</div>
+
+            <!-- 1. 하수구/오수관 막힘 -->
+            <div style="margin-top: 15px;">
+                <strong style="color:#123c73;">🚨 신암동 하수구 · 오수관 막힘 :</strong> 배관 내시경 정밀 확인 후 기름 슬러지 고압세척
+                <img src="hasugu.png" alt="하수구 고압세척" class="service-img">
             </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 동구</span>
-                <div class="link-tags">
-                    <a href="sinam.html" class="link-tag">신암동 하수구막힘</a>
-                    <a href="hyomok.html" class="link-tag">효목동 하수구막힘</a>
-                    <a href="gaksan.html" class="link-tag">각산동 하수구막힘</a>
-                </div>
+            <!-- 2. 싱크대/변기 역류 -->
+            <div style="margin-top: 20px;">
+                <strong style="color:#123c73;">🔨 신암동 싱크대 · 변기 역류 :</strong> 굳은 이물질 제거 및 배관 스케일링 작업
+                <img src="sink.png" alt="배관 스케일링 작업" class="service-img">
             </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 서구</span>
-                <div class="link-tags">
-                    <a href="pyeongri.html" class="link-tag">평리동 하수구막힘</a>
-                    <a href="bisan.html" class="link-tag">비산동 하수구막힘</a>
-                </div>
+            <!-- 3. 내시경 정밀 검사 -->
+            <div style="margin-top: 20px;">
+                <strong style="color:#123c73;">🔍 배관 내시경 정밀 검사 :</strong> 막힌 위치와 원인을 눈으로 직접 확인 후 맞춤 시공
+                <img src="endoscope.png" alt="내시경 검사 전후" class="service-img">
             </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 남구</span>
-                <div class="link-tags">
-                    <a href="daemyeong.html" class="link-tag">대명동 하수구막힘</a>
-                    <a href="bongdeok.html" class="link-tag">봉덕동 하수구막힘</a>
-                </div>
+            <!-- 4. 수전 및 배관 교체 -->
+            <div style="margin-top: 20px;">
+                <strong style="color:#123c73;">🔧 수전 및 배관 교체 :</strong> 싱크대 수전, 욕실 수도꼭지, 배수구 트랩 신속 교체
+                <img src="faucet.png" alt="수전 교체 현장" class="service-img">
             </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 북구</span>
-                <div class="link-tags">
-                    <a href="chimsan.html" class="link-tag">침산동 하수구막힘</a>
-                    <a href="sangyeok.html" class="link-tag">산격동 하수구막힘</a>
-                </div>
+            <!-- 5. 변기 교체 및 부속 수리 -->
+            <div style="margin-top: 20px;">
+                <strong style="color:#123c73;">🚽 변기 교체 및 부속 수리 :</strong> 낡은 변기 교체, 악취 차단 트랩, 백시멘트 재시공
+                <img src="toilet.png" alt="변기 교체 및 부속 수리" class="service-img">
             </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 수성구</span>
-                <div class="link-tags">
-                    <a href="beomeo.html" class="link-tag">범어동 하수구막힘</a>
-                    <a href="manchon.html" class="link-tag">만촌동 하수구막힘</a>
-                    <a href="dusan.html" class="link-tag">두산동 하수구막힘</a>
-                    <a href="hwanggeum.html" class="link-tag">황금동 하수구막힘</a>
-                </div>
+            <!-- 6. 욕조 배수구 수리 -->
+            <div style="margin-top: 20px;">
+                <strong style="color:#123c73;">🛁 욕조 배수구 수리 :</strong> 빠지거나 파손된 신암동 욕조 배수구 특수 수리
+                <img src="bathtub.png" alt="욕조 배수구 수리" class="service-img">
             </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 달서구</span>
-                <div class="link-tags">
-                    <a href="wolseong.html" class="link-tag">월성동 하수구막힘</a>
-                    <a href="sangin.html" class="link-tag">상인동 하수구막힘</a>
+            <!-- 하단 지역 바로가기 -->
+            <section class="local-links">
+                <strong style="font-size: 14px; color: #123c73;">📍 주요 서비스 및 대구·경산 지역 바로가기</strong>
+                
+                <div class="district-group">
+                    <span class="district-title">🏠 핵심 바로가기</span>
+                    <div class="link-tags">
+                        <a href="index.html" class="link-tag highlight">메인 홈페이지</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 달성군</span>
-                <div class="link-tags">
-                    <a href="dasa.html" class="link-tag">다사읍 하수구막힘</a>
-                    <a href="hwawon.html" class="link-tag">화원읍 하수구막힘</a>
+                <div class="district-group">
+                    <span class="district-title">🏙️ 동구</span>
+                    <div class="link-tags">
+                        <a href="sinam.html" class="link-tag">신암동 하수구막힘</a>
+                        <a href="hyomok.html" class="link-tag">효목동 하수구막힘</a>
+                        <a href="gaksan.html" class="link-tag">각산동 하수구막힘</a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="district-group">
-                <span class="district-title">🏙️ 경산시</span>
-                <div class="link-tags">
-                    <a href="jungbang.html" class="link-tag">중방동 하수구막힘</a>
-                    <a href="hayang.html" class="link-tag">하양읍 하수구막힘</a>
+                <div class="district-group">
+                    <span class="district-title">🏙️ 서구</span>
+                    <div class="link-tags">
+                        <a href="pyeongri.html" class="link-tag">평리동 하수구막힘</a>
+                        <a href="bisan.html" class="link-tag">비산동 하수구막힘</a>
+                    </div>
                 </div>
-            </div>
-        </section>
+
+                <div class="district-group">
+                    <span class="district-title">🏙️ 남구</span>
+                    <div class="link-tags">
+                        <a href="daemyeong.html" class="link-tag">대명동 하수구막힘</a>
+                        <a href="bongdeok.html" class="link-tag">봉덕동 하수구막힘</a>
+                    </div>
+                </div>
+
+                <div class="district-group">
+                    <span class="district-title">🏙️ 북구</span>
+                    <div class="link-tags">
+                        <a href="chimsan.html" class="link-tag">침산동 하수구막힘</a>
+                        <a href="sangyeok.html" class="link-tag">산격동 하수구막힘</a>
+                    </div>
+                </div>
+
+                <div class="district-group">
+                    <span class="district-title">🏙️ 수성구</span>
+                    <div class="link-tags">
+                        <a href="beomeo.html" class="link-tag">범어동 하수구막힘</a>
+                        <a href="manchon.html" class="link-tag">만촌동 하수구막힘</a>
+                        <a href="dusan.html" class="link-tag">두산동 하수구막힘</a>
+                        <a href="hwanggeum.html" class="link-tag">황금동 하수구막힘</a>
+                    </div>
+                </div>
+
+                <div class="district-group">
+                    <span class="district-title">🏙️ 달서구</span>
+                    <div class="link-tags">
+                        <a href="wolseong.html" class="link-tag">월성동 하수구막힘</a>
+                        <a href="sangin.html" class="link-tag">상인동 하수구막힘</a>
+                    </div>
+                </div>
+
+                <div class="district-group">
+                    <span class="district-title">🏙️ 달성군</span>
+                    <div class="link-tags">
+                        <a href="dasa.html" class="link-tag">다사읍 하수구막힘</a>
+                        <a href="hwawon.html" class="link-tag">화원읍 하수구막힘</a>
+                    </div>
+                </div>
+
+                <div class="district-group">
+                    <span class="district-title">🏙️ 경산시</span>
+                    <div class="link-tags">
+                        <a href="jungbang.html" class="link-tag">중방동 하수구막힘</a>
+                        <a href="hayang.html" class="link-tag">하양읍 하수구막힘</a>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
-    <!-- 하단 고정 전화 연결 버튼 -->
+    <!-- 하단 고정 전화 버튼 -->
     <a href="tel:010-2230-5630" class="fixed-bottom">
         📞 신암동 하수구막힘 긴급 전화 연결 (클릭)
     </a>
